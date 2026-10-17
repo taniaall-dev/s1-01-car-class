@@ -1,7 +1,7 @@
 public class Car {
 
     static final String brand = "Seat";
-    static String model;
+    static String model = "Ibiza";
     final int power;
 
     public Car (int power){
@@ -11,7 +11,7 @@ public class Car {
     public static void brake (){
         System.out.println("El vehicle està frenant");
     }
-    public void acelerar (){
+    public void accelerate (){
         System.out.println("El vehicle està accelerant");
     }
 }
