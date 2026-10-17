@@ -7,4 +7,11 @@ public class Car {
     public Car (int power){
         this.power = power;
     }
+
+    public static void brake (){
+        System.out.println("El vehicle està frenant");
+    }
+    public void acelerar (){
+        System.out.println("El vehicle està accelerant");
+    }
 }
