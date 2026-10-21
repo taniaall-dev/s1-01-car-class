@@ -1,19 +1,20 @@
 public class Main {
     public static void main (String[] args){
+
         Car.brake();
-        Car car = new Car(700);
-        Car car2 = new Car(400);
 
-        car.accelerate();
+        Car car = new Car(700, "Ibiza");
+        Car car2 = new Car(400, "Leon");
 
-        System.out.println("Los coches que se fabrican son: " + Car.brand + " " + Car.model);
-        System.out.println(Car.brand + " " +  Car.model + " " + car.power);
-        System.out.println(Car.brand + " " +  Car.model + " " + car2.power);
+        car2.accelerate();
 
-        Car.model = "Leon";
+        System.out.println("Los coches que se fabrican son marca: " + Car.getBrand() + " y modelo " + Car.getModel());
+        System.out.println(Car.getBrand() + " " +  Car.getModel() + " " + car.getPower());
+        System.out.println(Car.getBrand() + " " +  Car.getModel() + " " + car2.getPower());
 
-        System.out.println(Car.brand + " " +  Car.model + " " + car.power);
-        System.out.println(Car.brand + " " +  Car.model + " " + car2.power);
+        Car.setModel("Panda");
 
+        System.out.println(Car.getBrand() + " " + Car.getModel() + " " + car.getPower());
+        System.out.println(Car.getBrand() + " " + Car.getModel() + " " + car2.getPower());
     }
 }
