@@ -1,11 +1,12 @@
 public class Car {
 
-    static final String brand = "Seat";
-    static String model = "Ibiza";
-    final int power;
+    private static final String BRAND = "Seat";
+    private static String model;
+    private final int power;
 
-    public Car (int power){
+    public Car (int power, String model){
         this.power = power;
+        Car.model = model;
     }
 
     public static void brake (){
@@ -13,5 +14,20 @@ public class Car {
     }
     public void accelerate (){
         System.out.println("El vehicle està accelerant");
+    }
+
+    public static String getBrand(){
+        return BRAND;
+    }
+
+    public static String getModel(){
+        return model;
+    }
+    public static void setModel(String model){
+        Car.model = model;
+    }
+
+    public int getPower(){
+        return power;
     }
 }
